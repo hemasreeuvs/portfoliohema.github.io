@@ -14,14 +14,12 @@
 	<style>
 		
     :root {
-    --primary-color: #000000; /* Dark slate blue for headers */
+    --primary-color: #000000; /* Black for headers */
     --secondary-color: #e74c3c; /* Strong red for accents */
-    --background-color: #BC8F8F;
-    --text-color: #ffffff; /* Light text for contrast */
+    --background-color: #2C3E50; /* Dark blue-gray background */
+    --text-color: #ffffff; /* White text for contrast */
     --card-background: #34495e; /* Dark card background */
 }
-
-
 
 body {
     background-color: var(--background-color);
@@ -29,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Already dark headers */
 }
 
 a {
@@ -42,15 +40,16 @@ a:hover {
 }
 
 .posts article {
-    background-color: var(--primary-color); /* White background for posts */
+    background-color: #ffffff; /* White background for posts */
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 12px rgba(0, 188, 212, 0.1); /* Soft light blue shadow */
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth hover transition */
 }
 
 .posts article:hover {
     transform: scale(1.02);
+    background-color: #34495e; /* Darken background when hovered */
 }
 
 button, .actions .button {
